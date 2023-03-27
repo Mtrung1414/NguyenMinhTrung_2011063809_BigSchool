@@ -9,8 +9,11 @@ namespace NguyenMinhTrung_2011063809.Models
     public class Course
     {
         public int Id { get; set; }
+        public bool IsCanceled { get; set; }
 
-        public ApplicationUser Lecture { get; set; }
+        public ApplicationUser Lecture { get; set; } //Lecture == lecturer
+        [Required]
+        public string LectureId { get; set; }
         [Required]
         [StringLength(255)]
         public string Place { get; set; }
